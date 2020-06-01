@@ -37,7 +37,12 @@ export default function BurgerBuilder() {
     return (
         <div>
             <Modal show={purchasing} closeModal={cancelPurchase}>
-                <OrderSummary proceed={continuePurchase} cancel={cancelPurchase} ingredients={ingredients} />
+                <OrderSummary
+                    proceed={continuePurchase}
+                    cancel={cancelPurchase}
+                    ingredients={ingredients}
+                    price={totalPrice.toFixed(2)}
+                />
             </Modal>
             <Burger ingredients={ingredients} />
             <BuildControls

@@ -18,6 +18,7 @@ function OrderSummary(props) {
             <ul>
                 {ingredientsSummary}
             </ul>
+            <p><strong>Total Price:</strong> {props.price}</p>
             <p>Continue to Checkout?</p>
             <Button onClicked={props.cancel} btnType='Danger'>CANCEL</Button>
             <Button onClicked={props.proceed} btnType='Success'>CONTINUE</Button>
